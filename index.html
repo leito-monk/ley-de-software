@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hacia una ley de fomento de la Industria con Software</title>
+<meta name="description" content="Propuesta para renovar el régimen de promoción de la industria del software argentina y convertirlo en un engranaje del desarrollo nacional.">
+<meta name="theme-color" content="#fbfbf9">
+<link rel="canonical" href="https://leito-monk.github.io/ley-de-software/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Hacia una ley de fomento de la Industria con Software">
+<meta property="og:description" content="Propuesta para renovar el régimen de promoción de la industria del software argentina y convertirlo en un engranaje del desarrollo nacional.">
+<meta property="og:url" content="https://leito-monk.github.io/ley-de-software/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbf9;
+  --ink:#151513;
+  --ink-2:#3c3c38;
+  --muted:#7a7a73;
+  --line:#e6e6e0;
+  --accent:#a4262c;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Source Serif 4","Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:40.5rem;margin:0 auto;padding:4.5rem 1.5rem 6rem}
+
+.meta .eyebrow{
+  margin:0 0 1.1rem;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+h1{
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:600;
+  font-size:clamp(1.9rem,5vw,2.6rem);
+  line-height:1.12;
+  letter-spacing:-.025em;
+  text-wrap:balance;
+}
+h1 del{
+  color:var(--muted);
+  text-decoration-thickness:1px;
+  text-decoration-color:var(--accent);
+}
+
+.lead{
+  margin:2.6rem 0 0;
+  font-size:1.14rem;
+  line-height:1.75;
+  color:var(--ink-2);
+}
+
+section{margin-top:4.2rem}
+section > .texto{margin-top:1rem}
+
+h2{
+  margin:0 0 .2rem;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:600;
+  font-size:1.22rem;
+  line-height:1.3;
+  letter-spacing:-.015em;
+}
+
+.texto p{margin:0 0 1.1rem}
+.texto p:last-child{margin-bottom:0}
+
+.collarin{
+  margin:2.4rem 0;
+  padding:.1rem 0 .1rem 1.35rem;
+  border-left:2px solid var(--accent);
+  font-size:1.1rem;
+  line-height:1.65;
+  color:var(--ink-2);
+  font-style:italic;
+}
+
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+
+.propuestas{list-style:none;counter-reset:p;margin:1.4rem 0 0;padding:0}
+.propuestas li{
+  counter-increment:p;
+  position:relative;
+  padding-left:2.9rem;
+  margin:0 0 1.5rem;
+}
+.propuestas li:last-child{margin-bottom:0}
+.propuestas li::before{
+  content:counter(p,decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:.32em;
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:.78rem;
+  font-weight:600;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.02em;
+  color:var(--accent);
+}
+
+.firmas ul{
+  list-style:none;
+  margin:1.4rem 0 0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(16.5rem,1fr));
+  gap:.15rem 2.4rem;
+  font-size:.94rem;
+  line-height:1.55;
+}
+.firmas li{margin:0 0 .75rem;color:var(--ink-2)}
+.firmas li b{font-weight:600;color:var(--ink)}
+
+.notas{
+  margin-top:5rem;
+  padding-top:2.2rem;
+  border-top:1px solid var(--line);
+  font-size:.92rem;
+  line-height:1.65;
+  color:var(--ink-2);
+}
+.notas h2{margin-bottom:1.2rem}
+.notas ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.notas li{
+  counter-increment:n;
+  position:relative;
+  padding-left:1.8rem;
+  margin:0 0 1.1rem;
+}
+.notas li:last-child{margin-bottom:0}
+.notas li::before{
+  content:counter(n);
+  position:absolute;left:0;top:.05em;
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:.72rem;
+  font-weight:600;
+  color:var(--accent);
+}
+.notas p{margin:0 0 .7rem}
+.notas p:last-child{margin-bottom:0}
+
+a.sobrenota{
+  color:var(--accent);
+  text-decoration:none;
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:.68em;
+  font-weight:600;
+  vertical-align:super;
+  line-height:0;
+  padding:0 .06em;
+}
+a.sobrenota::before{content:"["}
+a.sobrenota::after{content:"]"}
+a.sobrenota:hover{text-decoration:underline}
+
+.cierre{
+  margin-top:5rem;
+  padding-top:1.4rem;
+  border-top:1px solid var(--line);
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding:3rem 1.15rem 4rem}
+  section{margin-top:3.4rem}
+  .propuestas li{padding-left:2.4rem}
+}
+
+@media print{
+  @page{margin:18mm}
+  body{background:#fff;font-size:10.5pt}
+  .wrap{max-width:none;padding:0}
+  section{margin-top:1.6rem;break-inside:auto}
+  h2{break-after:avoid}
+  .firmas,.collarin,.propuestas li{break-inside:avoid}
+  a.sobrenota{color:#000}
+}
+</style>
+</head>
+<body>
+<article class="wrap">
+    <header class="meta">
+      <p class="eyebrow">Documento de trabajo</p>
+      <h1>Hacia una ley de fomento de la Industria <del>del</del> con Software</h1>
+    </header>
+
+    <p class="lead">La Ley de Software del año 2004 sentó las bases que permitieron que la Argentina desarrollara una potente industria de software y servicios informáticos (SSI), con más de 5000 empresas que brindan empleo formal a más de 150.000 trabajadores y trabajadoras. Sin embargo, las sucesivas renovaciones y reglamentaciones que la llevaron a su actual forma como “Ley de Economía del Conocimiento” introdujeron distorsiones que desvirtuaron su objetivo original, por ejemplo, subsidiando a empresas usuarias de software en lugar de desarrolladoras, o a empresas ya maduras que ya no necesitan tal apoyo. De manera más estructural, la ley actual puso demasiado énfasis en la exportación directa de software y no incentivó a que la industria del software fomentara la competitividad de otras industrias argentinas. Este documento describe una propuesta de ley que busca renovar el régimen de promoción de la industria con miras a que se transforme en un engranaje del desarrollo nacional.</p>
+
+
+    <section>
+      <h2>Una única Ley de Economía del Conocimiento, un equívoco conceptual</h2>
+      <div class="texto">
+      <p>Al vencerse el régimen de fomento impulsado por la ley de 2004, luego de demoras, cavilaciones y también cabildeo, el Congreso Nacional aprobó su renovación bajo su forma actual que habla de promoción de la Economía del Conocimiento. El enfoque es problemático, porque engloba a sectores muy distintos y porque tiene una definición tan amplia que si se considera que todo trabajo tiene como punto de partida la volición humana basada en su intelecto, tampoco ofrece una delimitación conceptual clara. Pero más allá de las consideraciones más filosóficas, desde el punto de vista práctico es un error pretender unificar el sistema de incentivos y de requisitos para recibirlos de industrias muy disímiles en cantidad de empleados, en nivel de calificación, en tamaño de las empresas, y en su rol geopolítico.</p>
+    </div>
+      <blockquote class="collarin">¿Qué necesidad hay de subsidiar la actividad de I+D de la industria petrolera que pertenece mayoritariamente a capitales concentrados transnacionales? ¿Es la misma la trascendencia geopolítica de la industria del software que de la audiovisual en la era de la IA y la disputa por los minerales críticos? ¿La escasez o abundancia de profesionales de todas esas industrias son equiparables?</blockquote>
+      <div class="texto">
+      <p>Este documento no objeta que otros sectores de la economía a los que también podría caberles el paraguas de “industria sin chimeneas” estén amparados por una ley que fomente su desarrollo, pero boga por desacoplarlos para manejarlos de manera diferenciada de acuerdo a las necesidades del país en cada caso.</p>
+    </div>
+    </section>
+
+    <section>
+      <h2>Otros aprendizajes de estas dos décadas</h2>
+      <div class="texto"><div class="texto">
+      <p>Luego de más de dos décadas de vigencia de la ley original de promoción de la industria del software y sus continuadoras, hay algunos aprendizajes que vale poner sobre la mesa. Repitamos, <strong>no se trata de menospreciar el rol que estas leyes cumplieron sino de entender qué se necesita en el actual momento histórico</strong>.</p>
+      <p>Empecemos por un punto que llegó incluso a la discusión mediática: <strong>la ley nunca separó entre empresas que necesitaban un fomento inicial de aquellas suficientemente maduras</strong> como para ya no requerirlo. Algunas de estas, incluso, utilizaron trucos discursivos para saltear la restricción, de muy clara redacción en la ley, que impedía considerar el autodesarrollo de software como una actividad a fomentar.<br>La <strong>participación de las y los trabajadores y las universidades</strong> en la discusión de la ley, una deuda. Si bien las cámaras empresarias son un actor innegable a la hora de pensar el futuro de la industria, también lo son sus trabajadores, algunas veces nucleados en representaciones gremiales, que no fueron consultados a la hora de discutir las renovaciones. Tampoco se acudió al conocimiento experto acumulado en el sistema nacional de ciencia, tecnología e innovación (universidades nacionales, CONICET, etc.).</p>
+      <p>Si bien la ley en su espíritu original buscaba fomentar la <strong>innovación</strong> favoreciendo el vínculo con el sistema científico, sucesivas reglamentaciones fueron relajando este criterio hasta hacerlo prácticamente inexigible en la práctica, pudiendo suplirse con investigaciones de mercado o capacitaciones al personal. Ambas actividades virtuosas y necesarias, pero cuyos logros quedan muy lejos de la potencialidad que brinda la vinculación real con el sistema científico.</p>
+      <p>La <strong>soberanía tecnológica</strong> -y su contracara, la dependencia-, la sustitución de importaciones y la disminución de la presión sobre la balanza de pagos nunca se consideraron puntos de control dentro del desempeño de una empresa a la hora de recibir los incentivos, ni una direccionalidad sobre la que tratar de influir. En esta época donde la tecnología digital se encuentra en el centro de las discusiones comerciales, geopolíticas, e incluso militares, considerarlas es un imperativo para el desarrollo de nuestro país.</p>
+      <p>Desde el punto de vista económico, la visión de incentivar las exportaciones de software como objetivo primario de la ley trajo también consecuencias negativas: <strong>acopló el precio local del desarrollo de software al internacional</strong>, <strong>volviendo prácticamente imposible para pymes y muy dificultoso para el sector público acceder a los servicios de aquellas empresas que el mismo Estado subsidiaba</strong>. En un contexto donde tantos a las pymes como <strong>al propio Estado se le demandaba subirse a la ola de la digitalización</strong>, se generaba una especie de paradoja donde muchas veces la única salida era contratar servicios enlatados “en la nube” a empresas del extranjero y aún así, en el caso del sector público, se acrecentaba el estigma de un sector poco dinámico, atrasado, que se resistía a la digitalización y facilitar el acceso a la ciudadanía por medios más convenientes.</p>
+      <p>Cercana a esta discusión, se encuentra la si lo conveniente es <strong>subsidiar la oferta o la demanda</strong>. Mientras que el subsidio a la oferta se implementa mediante un descuento impositivo, el subsidio a la demanda, requiere en principio<a class="sobrenota" href="#nota-1" id="ref-1">1</a> de disponer de fondos frescos para solventar proyectos. Esa dificultad, sin embargo, no inhabilita a pensar que parte del fondo fiduciario asociado a la ley (hoy llamado FONPEC y con cientos de millones de pesos en su haber), pueda utilizarse como mecanismo adicional, concursable, para financiar algunos proyectos específicos, de pymes o del sector público con potencial transformador o un riesgo tecnológico más allá de la capacidad de dichas organizaciones de solventarlo. La contrapartida debería ser, en caso de éxito, la devolución de los fondos para volver a engrosar el fondo fiduciario, y por qué no, algún tipo de regalías para el sector público sobre el producto desarrollado.</p>
+    </div></div>
+    </section>
+
+    <section>
+      <h2>Una visión de la industria del software para la próxima década</h2>
+      <div class="texto"><div class="texto">
+      <p>A pesar de la vigencia renovada de la máxima atribuida a Niels Bohr sobre la dificultad de realizar predicciones, en especial sobre el futuro, la política industrial requiere animarse al ejercicio prospectivo y pensar cuál sería la evolución de la industria del software de la Argentina en el estado actual de las cosas.</p>
+      <p>La irrupción de la inteligencia artificial generativa está transformando profundamente el proceso productivo de la industria del software. El proceso hoy, que no está estabilizado, seguirá modificándose en la próxima década. A esta altura es claro que se reducirán las horas de profesional necesarias para muchas tareas de desarrollo y los tiempos de producción serán más cortos. Pero esta automatización no eliminará la necesidad de profesionales experimentados; los desplaza hacia roles de supervisión, toma de decisiones y validación de resultados. Es más claro cómo encajan ahí los profesionales más experimentados, y no tanto como adquirirán experiencia los novatos. Pero la visión de <strong>la construcción completamente automatizada de software no es el horizonte al que nos enfrentamos</strong>.</p>
+      <p>Por otro lado<strong>, la reducción en costos laborales no llevará a aplastar el costo de desarrollo de software</strong>. Los costos de las plataformas de Inteligencia Artificial Generativa (genAI) vienen creciendo, tanto por precio como por consumo necesario para automatizar tareas, y la industria irá navegando un equilibrio dado por la competencia entre salario y costo de token.</p>
+      <p>La tendencia del sector a la <strong>dependencia tecnológica y el consumo de servicios en el extranjero se incrementará</strong>. A las licencias de productos (IDEs, motores de BD, sistemas operativos, modelos de IA, ejecución de agentes), los costos de hosting y los problemas de vendor lock-in se le agregarán no sólo el costo por utilizar genAI sino también la dependencia del proceso constructivo en los entornos agénticos de desarrollo que las compañías de genAI proveen.</p>
+      <p>Un fenómeno interesante, y una oportunidad, estará del lado de la demanda. La baja de costos habilitará un crecimiento de proyectos que hoy son inviables: el <em>backlog</em> acumulado en el sector público, las pymes industriales y de servicios que nunca pudieron costear software a medida, los emprendimientos que no llegaban al umbral mínimo de inversión. Aparecerán categorías de sistemas que hoy apenas imaginamos. Un incremento fuerte en <strong>la demanda tiene potencial para compensar aunque sea parcialmente la disminución de demanda de fuerza laboral del sector de SSI.</strong></p>
+      <p>Poniendo el foco en los demandantes, sin duda, la necesidad de incorporar tecnologías digitales se incrementará y quienes no puedan hacerlo difícilmente podrán sobrevivir. Aunque la expectativa de costos reducidos y la mayor producción por profesional (un recurso hasta hoy escaso) no necesariamente llevarán a que los demandantes en Argentina puedan ser los beneficiarios de este nuevo escenario de la industria del software. Si no se modifican los incentivos, las empresas argentinas de software seguirán orientadas principalmente al desarrollo para clientes en el exterior aplicándose sobre ellas una presión a la baja de salarios y costos operativos. También seguirán posicionadas en uno de los eslabones de menor valor de la industria del software, donde se desarrolla para un tercero, fuera de la Argentina, que es dueño del producto que luego se venderá también en Argentina. Entonces, podría darse un escenario en el que la demanda creciente de software en Argentina nuevamente no pueda ser satisfecha por una industria de software local inclinada hacia el mercado externo. A su vez, eso resignaría a los sectores públicos y privados a continuar conformándose con paquetes cerrados, que no terminen de satisfacer sus necesidades y continúen abonando a una dependencia tecnológica no-soberana y presionando sobre la balanza comercial.</p>
+      <p>Necesitamos una industria del software que agregue aún más valor del que ya agrega, que incremente su productividad y que por sobre todo, dinamice otros sectores de la economía argentina. Es bueno exportar trabajo de programadoras y programadores argentinos, pero es mejor exportar software argentino. Es bueno exportar software argentino, pero es mejor comercializar licencias para utilizar software argentino y mejor aún exportar maquinaria argentina con software nacional, equipamiento agrícola altamente competitivo porque ahora es “smart” gracias al software argentino, fertilizantes que fueron mejorados gracias a una plataforma bioinformática nacional, electrodomésticos aún más “smart”, equipamiento médico de alta complejidad, etc.</p>
+      <p>Debemos eliminar la barrera de entrada para el entramado pyme nacional que quiere modernizarse, innovar, acercarse a la industria 4.0 y no puede afrontar inversiones a precios acoplados a los internacionales. Nuestra industria del software debe recibir incentivos no sólo cuando exporta, sino también cuando interactúa con sectores de la economía argentina, que aún exportando productos <em>sin</em> software, podrían exportar mejores productos <em>gracias</em> al software.</p>
+    </div></div>
+    </section>
+
+    <section>
+      <h2>Qué proponemos</h2>
+      <div class="texto"><ol class="propuestas">
+      <li>La ley debe servir para <strong>apoyar a las empresas que se encuentran en sus etapas iniciales</strong>, <strong>no a las que ya están maduras</strong>. Un criterio posible para medir esto podría ser analizar si el beneficio que obtendrían es menor que un 20% de su facturación. En ese caso, lo que se subsidio es suficientemente pequeño comparado con la facturación, y por ende se considera que ya no lo necesita porque ha alcanzado un nivel de madurez suficiente.</li>
+      <li>Como ya se dijo, es necesario tener una <strong>industria del software que dinamice también a otros sectores de la economía</strong>. Un posible camino es exigir que un porcentaje de la facturación provenga de clientes locales, haciendo contar más cuando se trata de clientes locales que a su vez tengan exportaciones comprobadas.</li>
+      <li>También es necesario <strong>dinamizar al Estado</strong>. La facturación de servicios al sector público podría cubrir una cuota del requerimiento enunciado en el punto anterior, aunque no la totalidad, para evitar obturar el objetivo de apoyar también al sector privado.</li>
+      <li>A la hora de <strong>ponderar las exportaciones directas, deben tener más peso las que involucren mayor valor agregado</strong>. Las empresas que exporten productos, licencias, o <em>software as a service</em> hecho en Argentina deberían recibir más facilidades que aquellas que solamente exporten horas de servicio (ya sea en formato <em>staff augmentation</em> u otros).</li>
+      <li><strong>No todas las innovaciones son igual de innovadoras</strong>. Las innovaciones comerciales e incrementales son bienvenidas, pero aquellas que son más disruptivas tienen el potencial de generar mucho más impacto, a la vez que tienen mayor riesgo tecnológico. El Estado debe acompañar este esfuerzo adicional dando mayores incentivos en la categoría I+D a los proyectos que cuenten con el involucramiento del sistema formal de ciencia, tecnología e innovación (universidades nacionales, CONICET, etc). A su vez, carece de sentido seguir considerando en esa categoría a las inversiones en capacitación, ya que eso se trata de una necesidad básica que las empresas necesitan en cualquier caso, casi como los servicios de infraestructura.</li>
+      <li><strong>El criterio de no subsidiar el autodesarrollo debe reforzarse</strong>. Si bien ya figura en la ley actual, empresas como Mercado Libre, que no sólo facturan millones sino que desarrollan software principalmente para uso propio, lo violan sistemáticamente apropiándose así de recursos que deberían servir para apoyar empresas incipientes y en lugar de eso terminan favoreciendo la concentración del capital.</li>
+      <li>Otro criterio <strong>para seguir recibiendo el incentivo debería ser poder mostrar crecimiento en alguna de las variables clave</strong>: facturación, productividad<a class="sobrenota" href="#nota-2" id="ref-2">2</a>, inversión en I+D, exportaciones, o empleo formal en Argentina. Considerando las coyunturas por las que suele atravesar nuestra economía, la autoridad de aplicación podría otorgar “waivers” durante periodos en los que la falta de crecimiento pueda atribuirse al contexto nacional y no al desempeño particular de una empresa, pero a excepción de esos casos, el incentivo debería ser a que las empresas crezcan, en particular en las dimensiones que más beneficios aportan al país.</li>
+      <li><strong>Las empresas que contribuyan a generar grados de libertad en la dependencia tecnológica y/o importadora argentina deberían ser incentivadas</strong>. Eso incluye a las que alojan su infraestructura tecnológica en el país en lugar de las nubes de los <em>hyperscalers</em> o que basan sus productos o servicios en componentes de otras empresas locales en lugar de las alternativas extranjeras (por ejemplo, el uso de plataformas locales para campañas de marketing por mail, pasarelas de pago argentinas en lugar de plataformas transnacionales, etc.). Un posible camino es establecer un coeficiente entre la facturación de una empresa y su demanda mensual de servicios en dólares y premiar mejoras incrementales en ese índice.</li>
+      <li><strong>Favorecer la internacionalización, pero no la radicación externa</strong>. Es bueno que una empresa argentina abra filiales en otras latitudes, pero no lo es que mude su sede de facturación para eludir impuestos, haciéndole trampa al Estado que participó de su incubación mediante este régimen, que formó a sus cuadros técnicos en las escuelas y universidades públicas, etc. Deben establecerse mecanismos para monitorear este tipo de maniobras desleales y suspender los beneficios de este régimen cuando dichas maniobras se puedan confirmar y acreditar fehacientemente.</li>
+      <li><strong>Incentivar la incorporación de jóvenes en el sector</strong>. En este nuevo contexto donde parecería que gran parte de las tareas que requieren bajo nivel de experiencia serán realizadas por IA, resulta indispensable acompañar la inserción laboral de las y los jóvenes en el sector. Por ende, sería razonable que alguna tasa de contratación de personal novel sea un plus para empresas incipientes y un requerimiento para las de cierto tamaño.</li>
+      <li><strong>Financiar la demanda de proyectos estratégicos</strong>. Utilizar el fondo fiduciario asociado a la ley para financiar, en todo o en parte, proyectos de software de pymes o del sector público que resulten estratégicos. En ese caso, el Estado acompaña absorbiendo parte del riesgo, pero si el proyecto resulta exitoso el fondo fiduciario recupera lo invertido y eventualmente algún tipo de regalía sobre el producto apoyado.</li>
+    </ol></div>
+    </section>
+
+    <section>
+      <h2>Conclusión</h2>
+      <div class="texto"><p>La Argentina debe darse a sí misma una estrategia de industrialización y tecnificación, convergente con (y nunca, a costa de) la mejora de las condiciones de vida de las mayorías, y la justicia social en la distribución de la renta. El sector de software nacional tiene un rol que jugar en esta estrategia, pero no pensado desde un compartimiento estanco sino más bien como una pieza de una maquinaria más amplia.</p>
+    <p>Hay consenso en identificar el crecimiento explosivo del sector en la argentina con su reconocimiento como “industria sin chimeneas” y los incentivos que le otorgó la Ley de Software del año 2004. Dicha ley, y sus sucesoras, cumplieron un rol en el apoyo y el direccionamiento del camino de crecimiento de la industria durante las últimas dos décadas, más ligado a su expansión y su rol como generador de divisas. La etapa que viene requiere otro rol en el que acompañe el desarrollo del resto de la economía argentina y el de su pueblo.</p></div>
+    </section>
+
+    <section class="firmas">
+      <h2>Firmas en orden alfabético:</h2>
+      <ul><li><b>Alexis Tcach,</b> Profesor Adjunto, Depto de Computación, Facultad de Ciencias Exactas y Naturales, UBA</li>
+      <li><b>Débora Fortini,</b> Ingeniera en Sistemas de Información, UTN</li>
+      <li><b>Esteban Feuerstein,</b> Depto de Computación, Facultad de Ciencias Exactas y Naturales, UBA</li>
+      <li><b>Estefania Pinetta Biro Aleman,</b> Abogada. Profesora en Ciencias Jurídicas. Universidad de Buenos Aires.</li>
+      <li><b>Fernando Schapachnik,</b> Profesor Asociado, Depto de Computación, Facultad de Ciencias Exactas y Naturales, UBA</li>
+      <li><b>Julián Dunayevich,</b> Licenciado en Ciencias de la Computación</li>
+      <li><b>Leandro Monk,</b> Presidente Mutual IT (MIT)</li>
+      <li><b>Manuel Dubinsky,</b> Jefe de Trabajos Prácticos, Depto de Computación, Facultad de Ciencias Exactas y Naturales, UBA</li>
+      <li><b>Martín Gaitán,</b> Ingeniero en Computación, Universidad Nacional de Córdoba</li>
+      <li><b>Miguel Pagano,</b> Profesor Asociado de la Facultad de Matemática, Astronomía, Física y Computación (FAMAF) - Universidad Nacional de Córdoba</li>
+      <li><b>Nicolás Passerini,</b> Profesor Adjunto en UTN-FRBA, UNQ y UNAHUR</li>
+      <li><b>Pablo Factorovich,</b> Profesor titular UNQ</li>
+      <li><b>Ricardo Medel,</b> Dr. en Ciencias de la Computación</li>
+      <li><b>Sebastián Scarano,</b> Ingeniero en Sistemas (UTN), Delegado Gremial ATE Secretaría de Trabajo Nación</li>
+      <li><b>Sebastián Uchitel,</b> Profesor Titular UBA/CONICET/UdeSA.</li></ul>
+    </section>
+
+    <section class="notas">
+      <h2>Notas al pie</h2>
+      <li id="nota-1">
+        <p>Existen por supuesto alternativas más complejas, como algún tipo de bonos que quien es subsidiado puede utilizar para pagar a su proveedor de software, quien luego los canjea por descuentos impositivos. Más allá de las complicaciones para implementar este mecanismo, otra desventaja es que para algunos proveedores estos descuentos adicionales podrían no ser convenientes. <a class="sobrenota" href="#ref-1">↩</a></p>
+      </li>
+      <li id="nota-2">
+        <p>La productividad vinculada al desarrollo tecnológico no ofrece una definición cerrada y autosuficiente en el ordenamiento jurídico nacional, puede inferirse en relación con la innovación, la incorporación de conocimiento y el fortalecimiento del sistema productivo. En ese sentido, la Ley 25.467 de Ciencia, Tecnología e Innovación establece entre los objetivos de la política científica y tecnológica el de “desarrollar y fortalecer la capacidad tecnológica y competitividad del sistema productivo de bienes y servicios”, mientras que la Ley 27.506 de Promoción de la Economía del Conocimiento vincula el uso del conocimiento y la digitalización de la información con la obtención de bienes, la prestación de servicios y la mejora de procesos, cuyo enfoque parece estar asociado a la expansión de capacidades económicas si se sigue el siguiente camino, desarrollo tecnológico, mayor productividad, dando lugar a una mayor competitividad, lo que daría pie a un mayor desarrollo económico.</p>
+        <p>De modo que la normativa actual concibe la productividad tecnológica principalmente como el resultado de la innovación aplicada, la modernización de procesos y la incorporación de tecnologías al sistema productivo.</p>
+        <p>De todas formas, es importante destacar que el aumento de productividad a premiar debería no ser la mera consecuencia de la incorporación de más personal. <a class="sobrenota" href="#ref-2">↩</a></p>
+      </li>
+    </section>
+
+    <footer class="cierre">Buenos Aires · documento de trabajo</footer>
+
+</article>
+</body>
+</html>
